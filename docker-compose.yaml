@@ -1,0 +1,12 @@
+version: "3"
+services:
+  os:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    restart: unless-stopped
+    environment:
+      APP_ENV: local
+    volumes:
+      - ./:/var/www
